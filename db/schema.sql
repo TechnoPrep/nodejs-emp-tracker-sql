@@ -17,10 +17,11 @@ CREATE TABLE employee (
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
   position_id INT NOT NULL,
-  PRIMARY KEY (id)
+  manager_id INT,
+  PRIMARY KEY (id),
   FOREIGN KEY (role_id) 
     REFERENCES position(id) 
-    ON DELETE SET NULL
+    ON DELETE SET NULL,
 );
 
 -- name, salary, and department
