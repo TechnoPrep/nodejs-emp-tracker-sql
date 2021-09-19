@@ -1,16 +1,10 @@
 const inquirer = require("inquirer");
-const mysql = require('mysql2');
-require('dotenv').config();
 
-// Creating our connection string function
-const db = mysql.createConnection({
-        host: 'localhost',
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_NAME
-    },
-    console.log(`Connected to the classlist_db database.`)
-);
+const sql = require('./db/query_lib');
+
+const selectDept = () =>{
+  
+}
 
 // Query lists
 
@@ -33,6 +27,30 @@ const db = mysql.createConnection({
 // Enter fields: fname, lname, role, manager
 
 // update an employees role
+
+
+const chooseRequest = () => {
+  inquirer.prompt([
+      {
+        type: 'list',
+        name: 'request',
+        message: 'What would you like to do?',
+        choices: ['Add A Department',
+                  'Add an Employee',
+                  'Add a Role',
+                  'Update Employee',
+                  'View All Departments',
+                  'View All Employees',
+                  'View All Roles'
+                  ],
+        loop: false,
+      },
+  ])
+  .then((data) => {
+      const {request} = data;
+    //   Switch case
+  })
+}
 
 
 
