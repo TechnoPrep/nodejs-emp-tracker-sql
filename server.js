@@ -129,6 +129,8 @@ const newRole = async () => {
  
 }
 
+// Delete and Employee
+// Bonus Objective
 const delEmp = async () => {
   const empArr = await cHelper.NonMgmtChoices();
 
@@ -148,7 +150,7 @@ const delEmp = async () => {
 
 }
 
-// update an employees role
+// Update an employees role
 const updateEmpRole = async () => {
 
   const roleArr = await cHelper.roleChoices();
@@ -178,7 +180,8 @@ const updateEmpRole = async () => {
  
 }
 
-// update an employees role
+// Update an employees Manager
+// Bonus Objective
 const updateEmpManager = async () => {
 
   const empArr = await cHelper.NonMgmtChoices();
@@ -249,6 +252,8 @@ const viewEmps = () => {
   }) 
 }
 
+// View All Departments and their Budget 
+// Bonus Objective
 const viewBudgets = async () => {
 
   sql.getBudgetByDept()
@@ -263,6 +268,8 @@ const viewBudgets = async () => {
   }) 
 }
 
+// View All Employees in a specific Department
+// Bonus Objective
 const viewEmpByDept = async () => {
 
   const deptArr = await cHelper.deptChoices();
@@ -288,6 +295,8 @@ const viewEmpByDept = async () => {
 
 }
 
+// View All Employees who report to a specific Manager
+// Bonus Objective
 const viewEmpByMgr = async () => {
 
   const mgmtArr = await cHelper.mgmtChoices();
@@ -320,21 +329,17 @@ const chooseRequest = () => {
         type: 'list',
         name: 'request',
         message: 'What would you like to do?',
-        choices: ['Add a Department', // Done
-                  'Add an Employee', // Done
-                  'Add a Role',// Done
-                  // Bonus
-                  'Delete an Employee',
-                  'Update Employees Role', // Done
-                  // Bonus
-                  'Update Employees Manager', // Done
-                  'View All Departments', // Done
-                  'View All Employees', // Done
-                  'View All Roles', // Done
-                  // Bonus
-                  'View Department Budget', // Done
-                  'View Employees by Department',
-                  'View Employees by Manager'
+        choices: ['Add a Department', 
+                  'Add an Employee', 
+                  'Add a Role',
+                  'Delete an Employee', // Bonus
+                  'Update Employees Manager', 
+                  'View All Departments', 
+                  'View All Employees', 
+                  'View All Roles', 
+                  'View Department Budget', // Bonus
+                  'View Employees by Department', // Bonus
+                  'View Employees by Manager' // Bonus
                  ],
         loop: false,
       },
