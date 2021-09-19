@@ -12,12 +12,31 @@ class DBQuery {
     );
   }
 
-  getAllRoles() {
-
+  getRoles() {
+    return this.db.promise().query(
+      `SELECT * 
+      FROM role`
+      );
   }
 
-  getAllEmp() {
-
+  getEmps() {
+    return this.db.promise().query(
+      `SELECT e.id as 'Employee ID', 
+      e.first_name AS 'First Name',
+      e.last_name AS 'Last Name',
+      department.department_name AS Department,
+      role.salary AS Salary,
+      role.title AS Role,
+      CONCAT(mgmt.first_name,' ',mgmt.last_name) as Manager
+      FROM employee e
+      LEFT JOIN employee mgmt
+      ON e.manager_id = mgmt.id 
+      INNER JOIN role
+      ON e.role_id = role.id 
+      LEFT JOIN department 
+      ON role.department_id = department.id
+      ORDER BY e.id;`
+      );
   }
 
   addDept() {
