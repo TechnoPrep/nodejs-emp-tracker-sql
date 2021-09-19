@@ -1,15 +1,22 @@
 const inquirer = require("inquirer");
-
+const cTable = require("console.table");
 const sql = require('./db/query_lib');
-
-const selectDept = () =>{
-  
-}
 
 // Query lists
 
 // View All Departments
 // Return Name and ID
+const viewDept = () => {
+  sql
+  .getDepts()
+  .then(([rows]) => {
+    console.log('\n');
+    console.log(cTable.getTable(rows));
+  })
+  .then(()=> {
+      chooseRequest();
+  }) 
+}
 
 // View All Roles
 // Return title, role id, department it belongs to, and salary
@@ -49,8 +56,17 @@ const chooseRequest = () => {
   .then((data) => {
       const {request} = data;
     //   Switch case
+    switch (request) {
+        case 'View All Departments':
+            viewDept();
+            break;
+    
+        default:
+            break;
+    }
   })
 }
 
+chooseRequest();
 
 
