@@ -28,6 +28,6 @@ VALUES ("Jerry", "Smith", 1, NULL),
        ("Morty", "Mortison", 7, NULL),
        ("Sarah", "Henderson", 8, 7),
        ("Bill", "Hicks", 9, 7),
-       ("Morty", "Mortison", 10, NULL),
+       ("Paul", "Paulson", 10, NULL),
        ("Bill", "Hicks", 11, 10),
        ("Larry", "David", 12, 10);
