@@ -6,7 +6,7 @@ const sql = require('./db/query_lib');
 
 // View All Departments
 // Return Name and ID
-const viewDept = () => {
+const viewDepts = () => {
   sql
   .getDepts()
   .then(([rows]) => {
@@ -21,8 +21,31 @@ const viewDept = () => {
 // View All Roles
 // Return title, role id, department it belongs to, and salary
 
+const viewRoles = () => {
+  sql
+  .getDepts()
+  .then(([rows]) => {
+    console.log('\n');
+    console.log(cTable.getTable(rows));
+  })
+  .then(()=> {
+      chooseRequest();
+  }) 
+}
 // View All employees
 // ID, FName, LName, Job Title, Departments, salaries, and Manager
+
+const viewEmps = () => {
+  sql
+  .getEmps()
+  .then(([rows]) => {
+    console.log('\n');
+    console.log(cTable.getTable(rows));
+  })
+  .then(()=> {
+      chooseRequest();
+  }) 
+}
 
 // add an department
 // Enter fields: Department Name
@@ -60,6 +83,9 @@ const chooseRequest = () => {
         case 'View All Departments':
             viewDept();
             break;
+        case 'View All Employees':
+            viewEmps();
+            break;          
     
         default:
             break;
