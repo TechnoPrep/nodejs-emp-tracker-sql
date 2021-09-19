@@ -2,11 +2,14 @@ const db = require('./connection');
 
 class DBQuery {
   constructor(db){
-    this.db = db
+    this.db = db;
   }
 
-  getAllDept() {
-
+  getDepts() {
+    return this.db.promise().query(
+    `SELECT * 
+    FROM department`
+    );
   }
 
   getAllRoles() {
@@ -30,7 +33,9 @@ class DBQuery {
   }
 
   updateEmp() {
-    
+
   }
 
 }
+
+module.exports = new DBQuery(db);
