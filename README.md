@@ -22,15 +22,17 @@
   3. Install NPM https://docs.npmjs.com/cli/v6/configuring-npm/install 
   5. Install and Configure MySQL https://dev.mysql.com/downloads/installer/
   6. Rename .env.EXAMPLE to .env and configure with your DB Credentials
-  7. Navigate to the git repo using your preferred CommandLine Application (Recommended GitBash or Inline Terminal within VSCode) 
-  8. run 'npm i' 
-  9. run 'npm start'
+  7. Navigate to the git repo using your preferred CommandLine Application (Recommended GitBash or Inline Terminal within VSCode)
+  8. cd db/ and run 'mysql -u root -p' and enter DataBase Password
+  9. run 'source schema.sql' then 'source seeds.sql'
+  10. run 'npm i' 
+  11 run 'npm start'
   
   ## Usage
   This application is intended to be used for you to have the ability to SELECT, INSERT, UPDATE, and DELETE information in the Employees Database 
 
   ### YouTube Run Instructions
-  [![YouTube How to Video](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+  [![YouTube How to Video](https://img.youtube.com/vi/Z9qpSAl8V3E/0.jpg)](https://youtu.be/Z9qpSAl8V3E)
             
   ## Credits
   No Credits Applicable
