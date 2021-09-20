@@ -1,4 +1,3 @@
-
   # SQL Employee Tracker
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -32,7 +31,7 @@
   This application is intended to be used for you to have the ability to SELECT, INSERT, UPDATE, and DELETE information in the Employees Database 
 
   ### YouTube Run Instructions
-  [![YouTube How to Video](https://img.youtube.com/vi/Z9qpSAl8V3E/0.jpg)](https://youtu.be/Z9qpSAl8V3E)
+  [![YouTube How to Video](https://img.youtube.com/vi/8wSVL_SqPP4/0.jpg)](https://youtu.be/8wSVL_SqPP4)
             
   ## Credits
   No Credits Applicable
