@@ -333,7 +333,8 @@ const chooseRequest = () => {
                   'Add an Employee', 
                   'Add a Role',
                   'Delete an Employee', // Bonus
-                  'Update Employees Manager', 
+                  'Update Employees Role',
+                  'Update Employees Manager', // Bonus 
                   'View All Departments', 
                   'View All Employees', 
                   'View All Roles', 
